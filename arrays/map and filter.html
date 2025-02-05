@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // filter 
+        let x =[1,2,3,4,5,6,7,8,9]
+        let filtred= x.filter ((item) => item>3)
+        console.log(filtred)
+
+        let n=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+        let filt= n.filter((t) => t %2!==0 )
+        console.log(filt)
+        
+
+        let names=["ali" ,"Ali", "Axmed","Mahmud","Aniso"]
+        let fil=names.filter((i) => i.startsWith("A"))
+        let fil1=names.filter((i) => i.endsWith("d"))
+        let fil2=names.filter((i) => i.length == 5)
+
+        console.log(fil)
+        console.log(fil1)
+        console.log(fil2)
+
+        let lessthen5=["umu kalthuum" ,"aamino","faadumo","kowthar","nafiso","ali","axmed"]
+        let fim=lessthen5.filter((o)=> o.length >5)
+        console.log(fim)
+
+        let magac=["ali" ,"Ali", "Axmed","Mahmud","Aniso"]
+        magac.map((item) => console.log(item))
+
+
+    </script>
+</body>
+</html>
