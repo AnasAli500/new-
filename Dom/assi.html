@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="sec1" style="width: 100px; height: 40px; background-color: blue; border-radius: 10px; color: whi;">Isku Dar</button>
+    <script>
+
+        let num1 = parseInt(prompt("Enter Number1"))
+        let num2 = parseInt(prompt("Enter Number2"))
+        document.write(`num1:${num1}\n  num2:${num2}\n `)
+
+
+        let sec1 =document.querySelector("#sec1")
+        sec1.addEventListener("click", () => {
+            document.write(num1+num2)
+        })
+    </script>
+</body>
+</html>

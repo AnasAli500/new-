@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount</title>
+</head>
+<body>
+    <script>
+        let discount, total_paid
+        let total_sales = parseFloat(prompt("Enter total sales: "))
+
+        if (total_sales > 750) {
+            discount = total_sales * 0.2
+            total_paid = total_sales - discount
+            alert(Discount Rate: %20\nDiscount: $${discount.toFixed(2)} \nTotal Paid: $${total_paid.toFixed(2)} \nTotal: $${total_sales})
+        } else if (total_sales > 500) {
+            discount = total_sales * 0.18
+            total_paid = total_sales - discount
+            alert(`Discount Rate: %18\n Discount: $${discount.toFixed(2)} \nTotal Paid: $${total_paid.toFixed(2)} \nTotal: $${total_sales}`)
+        } else if (total_sales > 400) {
+            discount = total_sales * 0.14
+            total_paid = total_sales - discount
+            alert(`Discount Rate: %14\nDiscount: $${discount.toFixed(2)} \nTotal Paid: $${total_paid.toFixed(2)} \nTotal: $${total_sales}`)
+        
+        } else if (total_sales > 300) {
+            discount = total_sales * 0.11
+            total_paid = total_sales - discount
+            alert(`Discount Rate: %11\nDiscount: $${discount.toFixed(2)} \nTotal Paid: $${total_paid.toFixed(2)} \nTotal: $${total_sales}`)
+        } else if (total_sales > 200) {
+            discount = total_sales * 0.08
+            total_paid = total_sales - discount
+            alert(Discount Rate: %8\nDiscount: $${discount.toFixed(2)} \nTotal Paid: $${total_paid.toFixed(2)} \nTotal: $${total_sales})
+        } else if (total_sales > 100) {
+            discount = total_sales * 0.05
+            total_paid = total_sales - discount
+            alert(`Discount Rate: %5\nDiscount: $${discount.toFixed(2)} \nTotal Paid: $${total_paid.toFixed(2)} \nTotal: $${total_sales}`)
+        } else {
+            discount = total_sales * 0
+            total_paid = total_sales - discount
+            alert(`Discount Rate: %0\nDiscount: $${discount.toFixed(2)} \nTotal Paid: $${total_paid.toFixed(2)} \nTotal: $${total_sales}`)
+        }
+
+    </script>
+</body>
+</html>

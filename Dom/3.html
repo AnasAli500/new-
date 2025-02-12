@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header1" style="display: flex ; gap:30px;">
+    <div id="sec1" style="background-color: red ; width: 300px; height: 200px; border-radius: 20px; "> </div>
+    <div id="sec2" style="background-color: red ; width: 300px; height: 200px; border-radius: 20px; "> </div>
+    </div>
+
+    <div  style="display: flex; padding-left: 5%; gap: 20%; padding-top: 2%;">
+        <button id="btn1"  style="background-color: black; color: white; padding: 10px 30px;border-radius: 3px;">Hidden</button>
+        <button id="btn2"  style="background-color: black; color: white; padding: 10px 30px;border-radius: 3px;">Display</button>
+    </div>
+
+    <input id="inp" style="width: 200px; height:30px; margin-top: 30px;" type="text" placeholder="Enter your name">
+
+    <p id="prg">WELcome</p>
+
+
+    <script>
+        let contain = document.querySelector("#header1")
+        let sec1 = document.querySelector("#sec1")
+        let sec2 = document.querySelector("#sec2")
+
+        const btn1= document.querySelector("#btn1")
+        const btn2= document.querySelector("#btn2")
+
+        btn1.addEventListener("click", () => {
+            contain.style.display="none"
+        })
+
+        btn2.addEventListener("click", () => {
+            contain.style.display="flex"
+        })
+
+            // mouseOver
+        sec1.addEventListener("mouseover", () =>{
+            sec1.style.backgroundColor="blue"
+        })
+
+            // mouseOut
+        sec1.addEventListener("mouseout", () =>{
+            sec1.style.backgroundColor="red"
+        })
+
+        // keyup & keydown
+
+
+        let inp = document.querySelector("#inp")
+        inp.addEventListener("keyup", (i) => {
+            alert(i.key)
+        })
+
+
+
+        // textContact innerHtml  //" update  text "
+
+        let prg = document.querySelector("#prg")
+        prg.textContent="HAllo"
+        prg.innerHTML="somali Boy"
+
+
+
+    </script>
+</body>
+</html>

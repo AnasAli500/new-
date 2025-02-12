@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+</head>
+<body class="flex sm:ml-[20%] items-center h-screen">
+
+    <div>
+        <div class="bg-[url(log.jpg)] bg-center bg-cover sm:w-[60%] sm:h-[270px] rounded-3xl sm:ml-64 ml-12 rounded-bl-[20px] mt-8">
+            <div class="bg-gradient-to-b from-black/60 to-transparent w-full h-full rounded-3xl">
+                <div>
+                    <h1 id="sec1" class=" hidden text-center">100</h1>
+                    <h1 id="value" class="text-8xl text-center text-white">0</h1>
+                    <div class="sm:ml-0 ml-[-8%]">
+                        <button id="btn2" class="shadow-black shadow-sm  bg-red-500   px-5  py-5 rounded-full ml-10 mt-10 text-white"></button>
+                        <button id="btn1" class="shadow-black shadow-sm  bg-green-500 px-10  py-10 rounded-full ml-10 mt-10 text-white"></button>
+                        <button id="btn3" class="shadow-black shadow-sm  bg-blue-500  px-5  py-5 rounded-full ml-10 mt-10 text-white"></button>
+                    </div>
+                  
+                </div>
+          </div>
+          </div>
+    </div>
+
+
+    <Script>
+        const value = document.querySelector("#value")
+        const btn1 = document.querySelector("#btn1")
+        const btn2 = document.querySelector("#btn2")
+        const btn3 = document.querySelector("#btn3")
+        const sec1 = document.querySelector("#sec1")
+
+        let startValue=0
+        let endVAlue = 0
+        
+
+
+        btn1.addEventListener("click", () => {
+            startValue ++
+            value.textContent=startValue
+            if(startValue===10){
+                value.style.color="red"
+            }
+            else{
+                value.style.color="black"
+            }
+
+            if(startValue===10){
+                sec1.style.display="block"
+                sec1.textContent="👌"
+            }
+            else if( (startValue===11)){
+                sec1.style.display="none"
+                sec1.style.color="black"
+            }
+        })
+
+
+        btn3.addEventListener("click", () => {
+            if(startValue>0){
+                startValue --
+                value.textContent=startValue 
+                    if(startValue===10){
+                value.style.color="red"
+            }
+            else{
+                value.style.color="black"
+            }
+            }
+        })
+
+        btn2.addEventListener("click" , () => {
+            startValue=0
+            value.textContent=startValue
+        })
+
+
+    </Script>
+</body>
+</html>

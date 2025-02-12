@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="sec1"></h1>
+    <button id="sec2">click</button>
+    <h1 style="color: red" id="sec3"></h1>
+
+    <script>
+
+        let content = parseInt(prompt("Enter the Number"))
+        let sec1 = document.querySelector("#sec1")
+        let sec2 = document.querySelector("#sec2")
+        let sec3 = document.querySelector("#sec3")
+
+        sec1.textContent = content
+
+        sec2.addEventListener("click",() => {
+            
+            if(content < 17){
+                sec3.textContent ="UnderWeaght"
+        }
+        else if(content > 18 && content < 25 ){
+            sec3.textContent ="avrage"
+            
+        }
+        else if (content > 26){
+            sec3.textContent ="OverWeaght"
+        }
+        })
+   
+    </script>
+</body>
+</html>
